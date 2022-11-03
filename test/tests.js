@@ -2,10 +2,13 @@
 import {
     addExclamationPoints,
     divideThenMultiply,
+    getSecondItem,
     makeLuckyGreeting,
     multiplyBy12ThenHalve,
     multiplyBySeven,
     myFunction,
+    renderDogDiv,
+    renderDogLI,
     returnAsAnArray,
     returnAsAString,
 } from '../functions.js';
@@ -99,9 +102,23 @@ test('this function should return numbers in an array', (expect) => {
     expect.deepEqual(actual3, expected3);
 });
 
+test('This function should take in three numbers and return those numbers mushed together as a string', (expect) => {
+    const expected1 = '845';
+    const actual1 = returnAsAString(8, 4, 5);
+    expect.equal(actual1, expected1);
+
+    const expected2 = '456';
+    const actual2 = returnAsAString(4, 5, 6);
+    expect.equal(actual2, expected2);
+
+    const expected3 = '987';
+    const actual3 = returnAsAString(9, 8, 7);
+    expect.equal(actual3, expected3);
+});
+
 test('This function should take in two numbers and return a greeting announcing that the sum of those numbers is todays lucky number', (expect) => {
-    const expected1 = 3;
-    const actual1 = makeLuckyGreeting(1, 2);
+    const expected1 = 12;
+    const actual1 = makeLuckyGreeting(8, 4);
 
     expect.equal(actual1, expected1);
 
@@ -116,4 +133,14 @@ test('This function should take in two numbers and return a greeting announcing 
     expect.equal(actual3, expected3);
 });
 
-test;
+// test('This function should take an array and return the second item in the array', (expect) => {
+//     const expected1 = ['1'];
+//     const actual1 = getSecondItem(1);
+
+//     expect.equal(actual1, expected1);
+// });
+
+// test('This function should take a dog object and return an <li> with the name of the dog', (expect) => {
+//     const expected1 = <li>Benny></li>;
+//     const actual1 = renderDogLI{name: 'Benny', age: 6};
+// });
