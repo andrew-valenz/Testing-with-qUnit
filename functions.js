@@ -96,7 +96,7 @@ Output:
 */
 
 export function returnAsAString(firstNumber, secondNumber, thirdNumber) {
-    return `${firstNumber}${secondNumber}${thirdNumber}`;
+    return '' + firstNumber + secondNumber + thirdNumber;
 }
 
 // This function should take in two numbers and return a greeting announcing that the sum of those numbers is today's lucky number
@@ -129,7 +129,7 @@ Output:
 */
 
 export function getSecondItem(array) {
-    return;
+    return array[1];
 }
 
 // This function should take an array and return the LAST item in the array, no matter the array's length
@@ -146,7 +146,7 @@ Output:
 */
 
 export function getLastItem(array) {
-    return true;
+    return array[array.length - 1];
 }
 
 // This function should take a dog object and return an <li> with the name of the dog

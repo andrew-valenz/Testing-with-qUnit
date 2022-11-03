@@ -2,6 +2,7 @@
 import {
     addExclamationPoints,
     divideThenMultiply,
+    getLastItem,
     getSecondItem,
     makeLuckyGreeting,
     multiplyBy12ThenHalve,
@@ -133,12 +134,39 @@ test('This function should take in two numbers and return a greeting announcing 
     expect.equal(actual3, expected3);
 });
 
-// test('This function should take an array and return the second item in the array', (expect) => {
-//     const expected1 = ['1'];
-//     const actual1 = getSecondItem(1);
+test('This function should take an array and return the second item in the array', (expect) => {
+    const expected1 = 'apple';
+    const actual1 = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
 
-//     expect.equal(actual1, expected1);
-// });
+    expect.equal(actual1, expected1);
+
+    const expected2 = 'socks';
+    const actual2 = getSecondItem(['shoes', 'socks', 'shirt', 'pant']);
+
+    expect.equal(actual2, expected2);
+
+    const expected3 = 'forks';
+    const actual3 = getSecondItem(['knives', 'forks', 'spoons', 'spatulas']);
+
+    expect.equal(actual3, expected3);
+});
+
+test('This function should take an array and return the LAST item in the array, no matter the arrays length', (expect) => {
+    const expected1 = 'plum';
+    const actual1 = getLastItem(['kiwi', 'apple', 'orange', 'plum']);
+
+    expect.equal(actual1, expected1);
+
+    const expected2 = 'pencil';
+    const actual2 = getLastItem(['paper', 'scissors', 'pen', 'pencil']);
+
+    expect.equal(actual2, expected2);
+
+    const expected3 = 'cube';
+    const actual3 = getLastItem(['triangle', 'circle', 'square', 'cube']);
+
+    expect.equal(actual3, expected3);
+});
 
 // test('This function should take a dog object and return an <li> with the name of the dog', (expect) => {
 //     const expected1 = <li>Benny></li>;
