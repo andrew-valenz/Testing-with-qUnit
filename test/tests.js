@@ -168,7 +168,19 @@ test('This function should take an array and return the LAST item in the array, 
     expect.equal(actual3, expected3);
 });
 
-// test('This function should take a dog object and return an <li> with the name of the dog', (expect) => {
-//     const expected1 = <li>Benny></li>;
-//     const actual1 = renderDogLI{name: 'Benny', age: 6};
-// });
+test('This function should take a dog object and return an <li> with the name of the dog', (expect) => {
+    const expected1 = '<li>Benny</li>';
+    const actual1 = renderDogLI({ name: 'Benny', age: 6 });
+
+    expect.equal(actual1, expected1);
+
+    const expected2 = '<li>Lex</li>';
+    const actual2 = renderDogLI({ name: 'Lex', age: 6 });
+
+    expect.equal(actual2, expected2);
+
+    const expected3 = '<li>Bear</li>';
+    const actual3 = renderDogLI({ name: 'Bear', age: 6 });
+
+    expect.equal(actual3, expected3);
+});
