@@ -64,7 +64,7 @@ Output:
 */
 
 export function divideThenMultiply(firstNumber, secondNumber, thirdNumber) {
-    return true;
+    return (firstNumber / secondNumber) * thirdNumber;
 }
 
 // This function should take in three numbers and return those numbers in an array
@@ -76,7 +76,7 @@ Input:
 
 Output: 
 
-[8, 4, 5]
+[8, 4, 5] this is an array.. use deepEqual
 */
 
 export function returnAsAnArray(firstNumber, secondNumber, thirdNumber) {
