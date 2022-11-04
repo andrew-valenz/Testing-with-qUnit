@@ -184,3 +184,20 @@ test('This function should take a dog object and return an <li> with the name of
 
     expect.equal(actual3, expected3);
 });
+
+test('this function should take a dog object and return a div with the dogs information', (expect) => {
+    const expected1 = '<div><h1>Benny</h1><p>Benny is 6 years old</p></div>';
+    const actual1 = renderDogDiv({ name: 'Benny', age: 6 });
+
+    expect.equal(actual1, expected1);
+
+    const expected2 = '<div><h1>Smoosh</h1><p>Smoosh is 2 years old</p></div>';
+    const actual2 = renderDogDiv({ name: 'Smoosh', age: 2 });
+
+    expect.equal(actual2, expected2);
+
+    const expected3 = '<div><h1>Leia</h1><p>Leia is 3 years old</p></div>';
+    const actual3 = renderDogDiv({ name: 'Leia', age: 3 });
+
+    expect.equal(actual3, expected3);
+});
